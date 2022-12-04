@@ -50,6 +50,20 @@
 				if(owner.reagents.has_reagent(toxin))
 					owner.adjustToxLoss(0.3 * PROCESS_ACCURACY)
 
+		if(damage >= min_broken_damage || ORGAN_DEAD) //Acute liver failure is life-threatening
+			if(prob(15))
+				owner.vomit(10, TRUE)
+				owner.bleed(15)
+				to_chat(owner, "<span class='warning'> You feel like you're dying!</span>")
+			if(prob(10))
+				owner.adjustStaminaLoss(50)
+				to_chat(owner, "<span class='warning'> You feel exhausted...")
+			if(prob(10))
+				owner.Confused(15 SECONDS)
+				to_chat(owner, "<span class='warning'> You feel confused.")
+			if(prob(6))
+				owner.vomit(15)
+
 /obj/item/organ/internal/liver/cybernetic
 	name = "cybernetic liver"
 	icon_state = "liver-c"
