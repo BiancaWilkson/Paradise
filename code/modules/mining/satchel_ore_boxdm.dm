@@ -38,29 +38,25 @@
 	if(Adjacent(user))
 		show_contents(user)
 
-/obj/structure/ore_box/proc/show_contents(mob/user)
-	var/dat = "<b>The contents of the ore box reveal...</b><br>"
-	var/list/assembled = list()
+
+/obj/structure/ore_box/ui_state(mob/user)
+	return GLOB.default_state
+
+/obj/structure/ore_box/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
+	. = ..()
+
+
+/obj/structure/ore_box/ui_data(mob/user)
+	var/list/data = list()
 	for(var/obj/item/stack/ore/O in src)
-		assembled[O.type] += O.amount
-	for(var/type in assembled)
-		var/obj/item/stack/ore/O = type
-		dat += "[initial(O.name)] - [assembled[type]]<br>"
+		data += list("ore" = O.type, quantity = O.amount)
+	return data
 
-	dat += "<br><br><A href='?src=[UID()];removeall=1'>Empty box</A>"
-	var/datum/browser/popup = new(user, "orebox", name, 400, 400)
-	popup.set_content(dat)
-	popup.open(0)
-
-/obj/structure/ore_box/Topic(href, href_list)
-	if(..())
-		return
-	usr.set_machine(src)
-	add_fingerprint(usr)
-	if(href_list["removeall"])
-		dump_box_contents()
-		to_chat(usr, "<span class='notice'>You empty the box.</span>")
-	updateUsrDialog()
+/obj/structure/ore_box/ui_interact(mob/user, datum/tgui/ui = null)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "OreBox", name)
+		ui.open()
 
 /obj/structure/ore_box/deconstruct(disassembled = TRUE, mob/user)
 	var/obj/item/stack/sheet/wood/W = new (loc, 4)
