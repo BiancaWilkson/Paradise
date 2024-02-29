@@ -91,6 +91,7 @@
 		brainmob.mind.assigned_role = "Positronic Brain"
 	if(H.mind)
 		H.mind.transfer_to(brainmob)
+	SEND_SIGNAL(brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 	to_chat(brainmob, "<span class='notice'>You feel slightly disoriented. That's normal when you're just a [ejected_flavor_text].</span>")
 	become_occupied(occupied_icon)
 

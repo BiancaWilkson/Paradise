@@ -52,6 +52,7 @@
 			REMOVE_TRAIT(brainmob, TRAIT_RESPAWNABLE, GHOSTED)
 			brainmob.set_stat(CONSCIOUS)
 			brainmob.see_invisible = initial(brainmob.see_invisible)
+			SEND_SIGNAL(brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 			GLOB.dead_mob_list -= brainmob//Update dem lists
 			GLOB.alive_mob_list += brainmob
 
@@ -257,6 +258,7 @@
 	holder.update_from_mmi()
 	if(brainmob && brainmob.mind)
 		brainmob.mind.transfer_to(H)
+	SEND_SIGNAL(brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 	holder.insert(H)
 
 	return 1

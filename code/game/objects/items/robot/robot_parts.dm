@@ -284,7 +284,7 @@
 			else if(!lawsync)
 				O.lawupdate = FALSE
 				O.make_laws()
-
+			SEND_SIGNAL(M.brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 			M.brainmob.mind.transfer_to(O)
 
 			if(O.mind && O.mind.special_role && !M.syndiemmi)

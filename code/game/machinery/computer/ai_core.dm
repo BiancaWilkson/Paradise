@@ -117,6 +117,7 @@
 					return
 
 				M.forceMove(src)
+				SEND_SIGNAL(M.brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 				brain = M
 				to_chat(user, "<span class='notice'>You add [M.name] to the frame.</span>")
 				update_icon(UPDATE_ICON_STATE)
@@ -146,6 +147,7 @@
 			if(brain)
 				to_chat(user, "<span class='notice'>You remove the brain.</span>")
 				brain.forceMove(loc)
+				SEND_SIGNAL(brain.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 				brain = null
 	update_icon(UPDATE_ICON_STATE)
 

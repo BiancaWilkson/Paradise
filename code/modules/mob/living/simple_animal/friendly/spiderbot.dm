@@ -151,6 +151,7 @@
 	mind = M.brainmob.mind
 	mind.key = M.brainmob.key
 	ckey = M.brainmob.ckey
+	SEND_SIGNAL(M.brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 	name = "Spider-bot ([M.brainmob.name])"
 	if(emagged)
 		to_chat(src, "<span class='userdanger'>You have been emagged; you are now completely loyal to [emagged_master] and [emagged_master.p_their()] every order!</span>")
@@ -174,6 +175,7 @@
 		mmi.forceMove(T)
 		if(mind)
 			mind.transfer_to(mmi.brainmob)
+			SEND_SIGNAL(mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 		mmi = null
 		name = "Spider-bot"
 		update_icon()

@@ -290,6 +290,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		if(mmi.brainmob)
 			mind.transfer_to(mmi.brainmob)
 			mmi.update_icon()
+			SEND_SIGNAL(mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 		else
 			to_chat(src, "<span class='boldannounceooc'>Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug.</span>")
 			ghostize()

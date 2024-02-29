@@ -1220,6 +1220,7 @@
 				to_chat(brainmob, "<span class='biggerdanger'>Your imprint to [R.imprinted_master] has been temporarily disabled. You should help the crew and not commit harm.</span>")
 		mmi_as_oc.loc = src
 		mmi_as_oc.mecha = src
+		SEND_SIGNAL(brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 		Entered(mmi_as_oc)
 		Move(loc)
 		icon_state = reset_icon()
@@ -1297,6 +1298,7 @@
 			if(mmi.brainmob)
 				L.forceMove(mmi)
 				L.reset_perspective()
+				SEND_SIGNAL(mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 			mmi.mecha = null
 			mmi.update_icon()
 			if(istype(mmi, /obj/item/mmi/robotic_brain))

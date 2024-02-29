@@ -9,6 +9,8 @@
 /mob/living/brain/New()
 	..()
 	add_language("Galactic Common")
+	RegisterSignal(src, COMSIG_CONSCIOUS_BRAIN_ASSISTED, PROC_REF(disallow_free_ghosting))
+	RegisterSignal(src, COMSIG_CONSCIOUS_BRAIN_UNASSISTED, PROC_REF(allow_free_ghosting))
 
 /mob/living/brain/Destroy()
 	if(key)				//If there is a mob connected to this thing. Have to check key twice to avoid false death reporting.
@@ -67,6 +69,17 @@ I'm using this for Stat to give it a more nifty interface to work with
 */
 /mob/living/brain/proc/has_synthetic_assistance()
 	return (container && istype(container, /obj/item/mmi)) || in_contents_of(/obj/mecha)
+
+//Signal handlers for letting brainmobs ghost freely if they're just stuck in Brain Hell
+/mob/living/brain/proc/allow_free_ghosting()
+	SIGNAL_HANDLER //COMSIG_CONSCIOUS_BRAIN_UNASSISTED
+	ADD_TRAIT(src, TRAIT_RESPAWNABLE, UID())
+	to_chat(src, "<span class='notice'>You can freely ghost with the ghost verb in the IC tab.</span>")
+
+/mob/living/brain/proc/disallow_free_ghosting()
+	SIGNAL_HANDLER //COMSIG_CONSCIOUS_BRAIN_ASSISTED
+	REMOVE_TRAIT(src, TRAIT_RESPAWNABLE, UID())
+	to_chat(src, "<span class='notice'>You can no longer freely ghost with the ghost verb in the IC tab.</span>")
 
 /mob/living/brain/proc/get_race()
 	if(container)
