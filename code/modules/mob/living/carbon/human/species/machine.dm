@@ -221,10 +221,3 @@
 								)
 		var/error_message = pick(error_messages)
 		to_chat(H, "<span class='boldwarning'>[error_message]</span>")
-
-//Special overrides for the funny robots
-/mob/living/carbon/human/machine/gib()
-	var/obj/item/mmi/robotic_brain/positronic/posibrain = get_int_organ(/obj/item/organ/internal/brain)
-	to_chat(src, "[posibrain] found")
-	if(..())
-		SEND_SIGNAL(posibrain.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
