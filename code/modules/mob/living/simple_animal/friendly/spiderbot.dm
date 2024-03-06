@@ -175,7 +175,7 @@
 		mmi.forceMove(T)
 		if(mind)
 			mind.transfer_to(mmi.brainmob)
-			SEND_SIGNAL(mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
+		SEND_SIGNAL(mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 		mmi = null
 		name = "Spider-bot"
 		update_icon()

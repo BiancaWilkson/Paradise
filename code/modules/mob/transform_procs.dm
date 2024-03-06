@@ -102,6 +102,7 @@
 				new_mmi = new /obj/item/mmi(O)
 		new_mmi.transfer_identity(src) //Does not transfer key/client.
 		// Replace the MMI.
+		SEND_SIGNAL(new_mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 		QDEL_NULL(O.mmi)
 		O.mmi = new_mmi
 

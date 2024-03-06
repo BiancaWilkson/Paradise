@@ -15,6 +15,7 @@
 	..()
 	// To supersede the over-writing of the MMI's name from `insert`
 	update_from_mmi()
+	SEND_SIGNAL(stored_mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_ASSISTED)
 	target.thought_bubble_image = "thought_bubble_machine"
 	if(ishuman(target) && istype(stored_mmi?.held_brain, /obj/item/organ/internal/brain/cluwne))
 		var/mob/living/carbon/human/H = target
@@ -26,6 +27,7 @@
 			. = stored_mmi
 			if(owner.mind)
 				owner.mind.transfer_to(stored_mmi.brainmob)
+			SEND_SIGNAL(stored_mmi.brainmob, COMSIG_CONSCIOUS_BRAIN_UNASSISTED)
 			stored_mmi.forceMove(get_turf(owner))
 			stored_mmi = null
 	return ..()
