@@ -18,7 +18,7 @@
 	var/call_start_time
 
 /// Creates a holocall made by `holo_caller` from `calling_pad` to `callees`
-/datum/holocall/New(mob/living/holo_caller, obj/machinery/hologram/holopad/calling_pad, list/callees)
+/datum/holocall/proc/New(mob/living/holo_caller, obj/machinery/hologram/holopad/calling_pad, list/callees)
 	call_start_time = world.time
 	user = holo_caller
 	calling_pad.outgoing_call = src
@@ -81,7 +81,7 @@
 
 
 /// Gracefully disconnects a holopad `H` from a call. Pads not in the call are ignored. Notifies participants of the disconnection
-/datum/holocall/proc/Disconnect(obj/machinery/hologram/holopad/H)
+/datum/holocall/proc/disconnect(obj/machinery/hologram/holopad/H)
 	if(H == connected_holopad)
 		var/area/A = get_area(connected_holopad)
 		calling_holopad.atom_say("[A] holopad disconnected.")
@@ -92,10 +92,10 @@
 	if(istype(hangup))
 		hangup.Remove(user)
 
-	ConnectionFailure(H, TRUE)
+	connection_failure(H, TRUE)
 
 /// Forcefully disconnects a holopad `H` from a call. Pads not in the call are ignored.
-/datum/holocall/proc/ConnectionFailure(obj/machinery/hologram/holopad/H, graceful = FALSE)
+/datum/holocall/proc/connection_failure(obj/machinery/hologram/holopad/H, graceful = FALSE)
 	if(H == connected_holopad || H == calling_holopad)
 		if(!graceful && H != calling_holopad)
 			calling_holopad.atom_say("Connection failure.")
@@ -110,7 +110,7 @@
 		qdel(src)
 
 /// Answers a call made to a holopad `H` which cannot be the calling holopad. Pads not in the call are ignored
-/datum/holocall/proc/Answer(obj/machinery/hologram/holopad/H)
+/datum/holocall/proc/answer(obj/machinery/hologram/holopad/H)
 	if(H == calling_holopad)
 		return
 
@@ -123,16 +123,16 @@
 	for(var/I in dialed_holopads)
 		if(I == H)
 			continue
-		Disconnect(I)
+		disconnect(I)
 
 	for(var/I in H.holo_calls)
 		var/datum/holocall/HC = I
 		if(HC != src)
-			HC.Disconnect(H)
+			HC.disconnect(H)
 
 	connected_holopad = H
 
-	if(!Check())
+	if(!check())
 		return
 
 	hologram = H.activate_holo(user)
@@ -145,11 +145,11 @@
 	hangup.Grant(user)
 
 /// Checks the validity of a holocall and qdels itself if it's not. Returns TRUE if valid, FALSE otherwise
-/datum/holocall/proc/Check()
+/datum/holocall/proc/check()
 	for(var/I in dialed_holopads)
 		var/obj/machinery/hologram/holopad/H = I
 		if((H.stat & NOPOWER) || !H.anchored)
-			ConnectionFailure(H)
+			connection_failure(H)
 
 	if(QDELETED(src))
 		return FALSE
@@ -176,4 +176,4 @@
 	hcall = HC
 
 /datum/action/innate/end_holocall/Activate()
-	hcall.Disconnect(hcall.calling_holopad)
+	hcall.disconnect(hcall.calling_holopad)

@@ -104,11 +104,11 @@ GLOBAL_LIST_EMPTY(holopads)
 
 /obj/machinery/hologram/holopad/Destroy()
 	if(outgoing_call)
-		outgoing_call.ConnectionFailure(src)
+		outgoing_call.connection_failure(src)
 
 	for(var/I in holo_calls)
 		var/datum/holocall/HC = I
-		HC.ConnectionFailure(src)
+		HC.connection_failure(src)
 
 	for(var/I in masters)
 		clear_holo(I)
@@ -142,7 +142,7 @@ GLOBAL_LIST_EMPTY(holopads)
 /obj/machinery/hologram/holopad/obj_break()
 	. = ..()
 	if(outgoing_call)
-		outgoing_call.ConnectionFailure(src)
+		outgoing_call.connection_failure(src)
 
 /obj/machinery/hologram/holopad/RefreshParts()
 	var/holograph_range = 4
@@ -199,7 +199,7 @@ GLOBAL_LIST_EMPTY(holopads)
 /obj/machinery/hologram/holopad/proc/hangup_all_calls()
 	for(var/I in holo_calls)
 		var/datum/holocall/HC = I
-		HC.Disconnect(src)
+		HC.disconnect(src)
 
 /obj/machinery/hologram/holopad/interact(mob/living/user)
 	if(!istype(user))
@@ -334,23 +334,23 @@ GLOBAL_LIST_EMPTY(holopads)
 			clear_holo(master)
 
 	if(outgoing_call)
-		outgoing_call.Check()
+		outgoing_call.check()
 
 	ringing = FALSE
 
 	for(var/I in holo_calls)
 		var/datum/holocall/HC = I
 		//Sanity check and skip if no longer valid call
-		if(!HC.Check())
+		if(!HC.check())
 			atom_say("Call was terminated at remote terminal.")
 			continue
 
 		if(HC.connected_holopad != src)
 			if((force_answer_call && world.time > (HC.call_start_time + (HOLOPAD_MAX_DIAL_TIME / 2))) || public_mode)
-				HC.Answer(src)
+				HC.answer(src)
 				break
 			if(outgoing_call)
-				HC.Disconnect(src)//can't answer calls while calling
+				HC.disconnect(src)//can't answer calls while calling
 			else
 				playsound(src, 'sound/machines/twobeep.ogg', 100)	//bring, bring!
 				ringing = TRUE
@@ -569,7 +569,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 /obj/effect/overlay/holo_pad_hologram/Destroy()
 	Impersonation = null
 	if(!QDELETED(HC))
-		HC.Disconnect(HC.calling_holopad)
+		HC.disconnect(HC.calling_holopad)
 	return ..()
 
 /obj/effect/overlay/holo_pad_hologram/Process_Spacemove(movement_dir = 0, continuous_move = FALSE)
