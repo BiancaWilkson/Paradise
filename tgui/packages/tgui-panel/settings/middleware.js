@@ -8,12 +8,9 @@ import { storage } from 'common/storage';
 
 import { setClientTheme } from '../themes';
 import {
-  addBlacklistSetting,
   addHighlightSetting,
   loadSettings,
-  removeBlacklistSetting,
   removeHighlightSetting,
-  updateBlacklistSetting,
   updateHighlightSetting,
   updateSettings,
 } from './actions';
@@ -80,10 +77,7 @@ export const settingsMiddleware = (store) => {
       type === loadSettings.type ||
       type === addHighlightSetting.type ||
       type === removeHighlightSetting.type ||
-      type === updateHighlightSetting.type ||
-      type === addBlacklistSetting.type ||
-      type === removeBlacklistSetting.type ||
-      type === updateBlacklistSetting.type
+      type === updateHighlightSetting.type
     ) {
       // Set client theme
       const theme = payload?.theme;

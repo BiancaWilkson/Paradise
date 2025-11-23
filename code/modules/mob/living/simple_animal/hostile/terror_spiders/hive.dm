@@ -56,7 +56,8 @@
 		else
 			spider_totals[E.spiderling_type] = E.spiderling_number
 		spider_totals["all"] += E.spiderling_number
-	for(var/mob/living/basic/spiderling/terror_spiderling/L in GLOB.ts_spiderling_list)
+	for(var/thing in GLOB.ts_spiderling_list)
+		var/mob/living/basic/spiderling/terror_spiderling/L = thing
 		if(L.stillborn)
 			continue
 		if(check_mine && L.spider_myqueen != src)

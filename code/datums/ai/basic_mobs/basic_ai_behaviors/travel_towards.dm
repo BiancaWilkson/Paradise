@@ -19,7 +19,6 @@
 	set_movement_target(controller, target, new_movement_type)
 
 /datum/ai_behavior/travel_towards/perform(seconds_per_tick, datum/ai_controller/controller, target_key)
-	. = ..()
 	return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
 
 /datum/ai_behavior/travel_towards/finish_action(datum/ai_controller/controller, succeeded, target_key)
@@ -54,5 +53,4 @@
 	set_movement_target(controller, target_atom)
 
 /datum/ai_behavior/travel_towards_atom/perform(seconds_per_tick, datum/ai_controller/controller, atom/target_atom)
-	. = ..()
 	return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED

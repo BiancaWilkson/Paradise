@@ -77,7 +77,7 @@
 		return 2
 	return ..()
 
-/obj/docking_port/mobile/supply/dock(obj/docking_port/stationary/port, force=FALSE, transit=FALSE)
+/obj/docking_port/mobile/supply/dock(obj/docking_port/stationary/port)
 	. = ..()
 	if(.)
 		return
