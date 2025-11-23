@@ -56,9 +56,13 @@
 	name = "\improper Transport Shuttle"
 	parallax_move_direction = EAST
 
-/area/shuttle/gamma
-	name = "\improper Gamma Armory Shuttle"
+/area/shuttle/gamma/space
 	icon_state = "shuttle"
+	name = "\improper Gamma Armory"
+
+/area/shuttle/gamma/station
+	icon_state = "shuttle"
+	name = "\improper Gamma Armory Station"
 
 /area/shuttle/siberia
 	name = "\improper Labor Camp Shuttle"

@@ -3038,13 +3038,6 @@
 /obj/structure/table/glass/reinforced/plastitanium,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
-"ku" = (
-/obj/effect/mapping_helpers/airlock/access/all/centcomm/commander,
-/obj/machinery/door/airlock/centcom{
-	name = "CentCom BSA Control"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/control)
 "kv" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3783,19 +3776,6 @@
 /obj/structure/closet/syndicate/personal,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
-"mJ" = (
-/obj/structure/fans/tiny,
-/obj/effect/mapping_helpers/airlock/access/all/centcomm/commander,
-/obj/machinery/door/airlock/external/glass{
-	name = "Gamma Armory";
-	id_tag = "gamma_away"
-	},
-/obj/machinery/door/poddoor/impassable{
-	id_tag = "CCGAMMA";
-	name = "Gamma Security"
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
 "mK" = (
 /obj/machinery/computer/shuttle/syndicate/recall,
 /obj/effect/turf_decal/tiles/jobs/bar/checker,
@@ -4290,34 +4270,6 @@
 /obj/item/reagent_containers/glass/bottle/adminordrazine,
 /turf/simulated/floor/plasteel/freezer,
 /area/admin)
-"of" = (
-/obj/effect/turf_decal/tiles/department/security/side,
-/obj/machinery/newscaster/security_unit/directional/south,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
-"og" = (
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 1
-	},
-/obj/structure/table/reinforced,
-/obj/item/clipboard,
-/obj/item/folder/red,
-/obj/item/stamp{
-	pixel_x = 1;
-	pixel_y = 10
-	},
-/obj/item/stamp/denied{
-	pixel_x = 10;
-	pixel_y = 10
-	},
-/obj/machinery/door_control/no_emag{
-	id = "CCGAMMA";
-	name = "Gamma Lockdown";
-	req_access = list(114);
-	pixel_y = 24
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
 "oh" = (
 /obj/structure/flora/grass/jungle,
 /turf/simulated/floor/grass/jungle,
@@ -4523,6 +4475,13 @@
 	},
 /turf/simulated/floor/mineral/plastitanium,
 /area/shuttle/supply)
+"oW" = (
+/obj/machinery/computer/shuttle/white_ship,
+/obj/effect/turf_decal/tiles/department/security/side{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "oX" = (
 /obj/structure/table,
 /obj/machinery/cooking/grill/upgraded,
@@ -4542,19 +4501,6 @@
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/shuttle/escape)
-"pc" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/structure/closet/emcloset,
-/obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/obj/item/clothing/mask/gas,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/specops)
 "pe" = (
 /obj/structure/table/wood,
 /obj/item/storage/fancy/cigarettes/cigpack_robustgold{
@@ -4661,10 +4607,6 @@
 /obj/effect/turf_decal/tiles/jobs/bar/checker,
 /turf/simulated/floor/plasteel,
 /area/syndicate_mothership)
-"pB" = (
-/obj/docking_port/stationary/gamma_armory/centcomm,
-/turf/space,
-/area/space/centcomm)
 "pD" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/mineral/plastitanium/red,
@@ -4734,17 +4676,6 @@
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/grass,
 /area/centcom/evac)
-"pO" = (
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 5
-	},
-/obj/structure/table/reinforced,
-/obj/machinery/recharger/wallcharger/upgraded{
-	pixel_y = 32
-	},
-/obj/item/radio/headset/centcom,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
 "pR" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
@@ -6240,6 +6171,11 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/centcom/evac)
+"uR" = (
+/obj/machinery/door/airlock/titanium,
+/obj/structure/fans/tiny,
+/turf/simulated/floor/plating,
+/area/shuttle/gamma/space)
 "uS" = (
 /obj/effect/spawner/window/plastitanium,
 /turf/simulated/floor/plating,
@@ -6532,13 +6468,6 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/carpet,
 /area/admin)
-"wa" = (
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 1
-	},
-/obj/machinery/computer/shuttle/white_ship,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
 "wc" = (
 /obj/structure/urinal{
 	pixel_y = 28
@@ -7871,6 +7800,13 @@
 	},
 /turf/simulated/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/supply)
+"AU" = (
+/obj/effect/mapping_helpers/airlock/access/all/centcomm/commander,
+/obj/machinery/door/airlock/centcom{
+	name = "CentCom BSA Control"
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "AV" = (
 /obj/item/kirbyplants/large,
 /turf/simulated/floor/plasteel/dark,
@@ -8602,22 +8538,8 @@
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/suppy)
 "DB" = (
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 6
-	},
-/obj/machinery/computer/communications{
-	dir = 8
-	},
-/obj/machinery/door_control/no_emag{
-	id = "SpecopsFerry";
-	name = "Hanger Bay Shutters";
-	pixel_y = -38
-	},
-/obj/machinery/keycard_auth{
-	pixel_y = -24
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
+/turf/simulated/wall/mineral/titanium,
+/area/shuttle/gamma/space)
 "DC" = (
 /obj/machinery/conveyor/west{
 	id = "QMLoad"
@@ -8628,11 +8550,13 @@
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/suppy)
 "DD" = (
-/obj/structure/chair/office/dark{
-	dir = 4
+/obj/machinery/power/apc/directional/south,
+/obj/structure/sign/securearea{
+	pixel_x = -32
 	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
+/obj/machinery/suit_storage_unit/gamma/secure,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "DE" = (
 /obj/machinery/conveyor/west{
 	id = "QMLoad"
@@ -8668,22 +8592,18 @@
 /turf/simulated/floor/plasteel/dark,
 /area/admin)
 "DL" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 24
-	},
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 4
-	},
-/obj/machinery/computer/emergency_shuttle{
-	dir = 8
-	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
+/obj/machinery/mech_bay_recharge_port/upgraded,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "DM" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/secure/briefcase,
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/specops)
+"DN" = (
+/obj/mecha/combat/marauder/ares/loaded,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "DO" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
@@ -8735,6 +8655,12 @@
 /obj/item/clothing/shoes/space_ninja,
 /turf/simulated/floor/engine,
 /area/admin)
+"DY" = (
+/obj/machinery/computer/mech_bay_power_console{
+	dir = 1
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "DZ" = (
 /obj/item/stock_parts/cell/bluespace,
 /obj/item/stock_parts/cell/bluespace,
@@ -9127,13 +9053,6 @@
 /obj/item/trash/candy,
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/control)
-"Fz" = (
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 9
-	},
-/obj/structure/filingcabinet/chestdrawer,
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
 "FA" = (
 /obj/structure/curtain/open/shower/security,
 /obj/item/soap/syndie,
@@ -9462,6 +9381,9 @@
 	},
 /turf/simulated/floor/plasteel/white,
 /area/centcom/control)
+"GC" = (
+/turf/simulated/wall/indestructible/fakeglass,
+/area/centcom/gamma)
 "GE" = (
 /obj/machinery/chem_dispenser,
 /turf/simulated/floor/mineral/titanium,
@@ -9739,6 +9661,23 @@
 /obj/structure/railing,
 /turf/simulated/floor/wood,
 /area/ghost_bar)
+"HB" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/obj/machinery/light/spot{
+	dir = 8
+	},
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/ammo_box/shotgun/buck,
+/obj/item/gun/projectile/shotgun/automatic/combat,
+/obj/item/gun/projectile/shotgun/automatic/combat,
+/obj/item/gun/projectile/shotgun/automatic/combat,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "HC" = (
 /obj/machinery/chem_master,
 /turf/simulated/floor/mineral/titanium,
@@ -9770,6 +9709,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/ghost_bar)
+"HI" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/gun/projectile/automatic/proto,
+/obj/item/gun/projectile/automatic/proto,
+/obj/item/gun/projectile/automatic/proto,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "HJ" = (
 /obj/structure/table/holotable,
 /obj/item/clothing/suit/armor/riot/knight/red,
@@ -9784,6 +9733,26 @@
 /obj/structure/sign/drop,
 /turf/simulated/wall/indestructible/syndicate/no_diagonal,
 /area/syndicate_mothership)
+"HL" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/item/gun/energy/gun/nuclear,
+/obj/item/gun/energy/gun/nuclear,
+/obj/item/gun/energy/gun/nuclear,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
+"HM" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/obj/item/gun/energy/immolator/multi,
+/obj/item/gun/energy/immolator/multi,
+/obj/item/gun/energy/immolator/multi,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "HN" = (
 /turf/simulated/floor/indestructible/necropolis,
 /area/ruin/space/bubblegum_arena)
@@ -9924,12 +9893,21 @@
 /obj/effect/mapping_helpers/airlock/access/all/command/general,
 /turf/simulated/floor/plasteel/dark,
 /area/shuttle/escape)
-"Iq" = (
-/obj/effect/turf_decal/tiles/department/security/corner{
-	dir = 4
+"Ip" = (
+/obj/machinery/recharger/wallcharger/upgraded{
+	pixel_x = -24
 	},
-/turf/simulated/floor/plasteel/dark,
-/area/centcom/gamma)
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
+"Iq" = (
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
+"Ir" = (
+/obj/machinery/recharger/wallcharger/upgraded{
+	pixel_x = 32
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "Is" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/ants,
@@ -10282,6 +10260,13 @@
 /obj/effect/turf_decal/tiles/dark/checker,
 /turf/simulated/floor/plasteel/white,
 /area/tdome/tdomeobserve)
+"JD" = (
+/obj/machinery/computer/shuttle/ferry,
+/obj/effect/turf_decal/tiles/department/security/side{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "JE" = (
 /obj/item/stack/sheet/plasmaglass/fifty,
 /obj/item/stack/sheet/plasmaglass/fifty,
@@ -10303,9 +10288,11 @@
 /turf/simulated/floor/grass,
 /area/centcom/evac)
 "JH" = (
-/obj/structure/filingcabinet/filingcabinet,
-/turf/simulated/floor/carpet,
-/area/centcom/control)
+/obj/effect/turf_decal/tiles/department/security/side{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "JI" = (
 /obj/effect/mapping_helpers/airlock/autoname,
 /obj/machinery/door/airlock/centcom,
@@ -10317,13 +10304,38 @@
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/tdome/tdomeobserve)
-"JM" = (
-/obj/machinery/computer/shuttle/ferry,
+"JK" = (
+/obj/machinery/door_control/no_emag{
+	id = "CCGAMMA";
+	name = "Gamma Lockdown";
+	pixel_x = 32;
+	req_access = list(114)
+	},
+/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/turf_decal/tiles/department/security/side{
 	dir = 5
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/gamma)
+"JM" = (
+/obj/machinery/autolathe/upgraded/gamma,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/metal/fifty,
+/obj/item/stack/sheet/glass/fifty,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
+"JN" = (
+/obj/structure/table/reinforced,
+/obj/item/grenade/clusterbuster,
+/obj/item/grenade/chem_grenade/incendiary{
+	name = "Incendiary Grenade"
+	},
+/obj/item/kitchen/knife/combat,
+/obj/item/kitchen/knife/combat,
+/obj/item/kitchen/knife/combat,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "JO" = (
 /obj/machinery/status_display{
 	pixel_x = -32
@@ -10351,6 +10363,12 @@
 /obj/effect/turf_decal/tiles/jobs/bar/checker,
 /turf/simulated/floor/plasteel,
 /area/tdome/tdomeobserve)
+"JR" = (
+/obj/structure/closet/secure_closet/guncabinet,
+/obj/item/gun/medbeam,
+/obj/item/gun/medbeam,
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "JS" = (
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'FOURTH WALL'.";
@@ -11045,6 +11063,12 @@
 	},
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/gamma)
+"Mi" = (
+/obj/effect/turf_decal/tiles/department/security/side{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "Mk" = (
 /obj/machinery/door_control/no_emag{
 	id = "thunderdomegen";
@@ -11069,6 +11093,24 @@
 /obj/item/storage/box/trackimp,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/administration)
+"Mn" = (
+/obj/effect/mapping_helpers/airlock/access/all/centcomm/commander,
+/obj/machinery/door/airlock/centcom{
+	name = "Gamma Armory"
+	},
+/obj/machinery/door/poddoor/impassable{
+	id_tag = "CCGAMMA";
+	name = "Gamma Security"
+	},
+/obj/structure/fans/tiny,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
+"Mo" = (
+/obj/structure/sign/securearea{
+	pixel_x = 32
+	},
+/turf/simulated/floor/mineral/plastitanium/red,
+/area/shuttle/gamma/space)
 "Mq" = (
 /obj/structure/table/glass/reinforced/plastitanium,
 /obj/machinery/computer/security/telescreen,
@@ -11495,6 +11537,21 @@
 	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/administration)
+"NL" = (
+/obj/machinery/keycard_auth{
+	pixel_y = -24
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/machinery/door_control/no_emag{
+	id = "SpecopsFerry";
+	name = "Hanger Bay Shutters";
+	pixel_y = -38
+	},
+/obj/item/radio/headset/centcom,
+/obj/effect/turf_decal/tiles/department/security/side,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "NM" = (
 /obj/effect/turf_decal/stripes/line{
 	dir = 4
@@ -11527,10 +11584,23 @@
 /obj/structure/bookcase/random,
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/specops)
+"NQ" = (
+/obj/structure/chair/office/dark,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "NR" = (
 /obj/item/clothing/head/bearpelt/polar,
 /turf/simulated/floor/plating/asteroid/snow,
 /area/syndicate_mothership)
+"NS" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 24
+	},
+/obj/effect/turf_decal/tiles/department/security/side{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "NT" = (
 /obj/structure/table,
 /obj/item/reagent_containers/drinks/cans/sodawater{
@@ -11971,9 +12041,24 @@
 /obj/effect/turf_decal/tiles/jobs/bar/checker,
 /turf/simulated/floor/plasteel,
 /area/syndicate_mothership)
+"Ps" = (
+/obj/machinery/computer/communications{
+	dir = 1
+	},
+/obj/effect/turf_decal/tiles/department/security/side,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "Pu" = (
 /turf/simulated/floor/plasteel/freezer,
 /area/ghost_bar)
+"Pv" = (
+/obj/machinery/computer/emergency_shuttle{
+	dir = 1
+	},
+/obj/machinery/newscaster/security_unit/directional/south,
+/obj/effect/turf_decal/tiles/department/security/side,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "Pw" = (
 /obj/structure/table/wood,
 /obj/item/storage/box/drinkingglasses,
@@ -12021,6 +12106,11 @@
 	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/administration)
+"PD" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/turf_decal/tiles/department/security/side,
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/gamma)
 "PE" = (
 /turf/simulated/floor/plating/asteroid/snow,
 /area/space/centcomm)
@@ -12047,13 +12137,21 @@
 /turf/simulated/floor/plasteel/freezer,
 /area/ghost_bar)
 "PG" = (
-/obj/effect/turf_decal/tiles/department/security/side{
-	dir = 10
+/obj/item/clipboard,
+/obj/item/folder/red,
+/obj/item/stamp/denied{
+	pixel_x = 3;
+	pixel_y = 3
 	},
+/obj/item/stamp,
+/obj/structure/table/reinforced,
+/obj/effect/turf_decal/tiles/department/security/side,
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/gamma)
 "PH" = (
-/obj/effect/turf_decal/tiles/department/security/side,
+/obj/effect/turf_decal/tiles/department/security/side{
+	dir = 6
+	},
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/gamma)
 "PI" = (
@@ -12588,6 +12686,19 @@
 	},
 /turf/simulated/floor/wood,
 /area/wizard_station)
+"Ru" = (
+/obj/structure/closet/emcloset,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/item/clothing/mask/gas,
+/obj/effect/turf_decal/stripes/line{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel/dark,
+/area/centcom/specops)
 "Rv" = (
 /turf/simulated/wall/mineral/plastitanium/nodiagonal,
 /area/shuttle/administration)
@@ -13706,12 +13817,6 @@
 /obj/item/reagent_containers/drinks/cans/madminmalt,
 /turf/simulated/floor/plasteel,
 /area/centcom/evac)
-"Vw" = (
-/obj/structure/marker_beacon/dock_marker/collision{
-	name = "military no fly zone"
-	},
-/turf/space,
-/area/space/centcomm)
 "Vx" = (
 /turf/simulated/floor/plasteel/freezer,
 /area/wizard_station)
@@ -14676,6 +14781,12 @@
 /obj/structure/flora/ausbushes/pointybush,
 /turf/simulated/floor/grass,
 /area/tdome/tdomeobserve)
+"YG" = (
+/obj/structure/marker_beacon/dock_marker{
+	name = "military no fly zone"
+	},
+/turf/space,
+/area/space/centcomm)
 "YH" = (
 /obj/item/storage/firstaid/regular,
 /obj/structure/table,
@@ -15204,11 +15315,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -15466,11 +15577,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -15718,11 +15829,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -15980,11 +16091,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -16232,11 +16343,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -16494,11 +16605,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -16746,11 +16857,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -17008,11 +17119,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -17260,11 +17371,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -17522,11 +17633,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -17774,11 +17885,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -18036,11 +18147,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -18288,11 +18399,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -18550,11 +18661,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -18802,11 +18913,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -19064,11 +19175,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -19316,11 +19427,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -19578,11 +19689,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -19830,11 +19941,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -20092,11 +20203,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -20344,11 +20455,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -20606,11 +20717,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -20858,11 +20969,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -21120,11 +21231,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -21372,11 +21483,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -21634,11 +21745,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -21886,11 +21997,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -22148,11 +22259,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -22400,11 +22511,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -22662,11 +22773,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -22914,11 +23025,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -23176,11 +23287,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -23428,11 +23539,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -23690,11 +23801,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -23942,11 +24053,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -24204,11 +24315,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -24456,11 +24567,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -24718,11 +24829,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -24970,11 +25081,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -25232,11 +25343,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -25484,11 +25595,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -25746,11 +25857,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -25998,11 +26109,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -26260,11 +26371,11 @@ aN
 aN
 aN
 aN
-Vw
 aN
 aN
 aN
-Vw
+aN
+aN
 aN
 aN
 aN
@@ -26512,11 +26623,11 @@ aN
 aN
 aN
 aN
+YG
 aN
 aN
 aN
-aN
-aN
+YG
 aN
 aN
 aN
@@ -26774,11 +26885,11 @@ aN
 aN
 aN
 aN
-YA
 aN
 aN
 aN
-YA
+aN
+aN
 aN
 aN
 aN
@@ -27026,16 +27137,16 @@ aN
 aN
 aN
 aN
+YG
+aN
+aN
+aN
+YG
 aN
 aN
 aN
 aN
 aN
-YA
-aU
-FZ
-qp
-YA
 aN
 aN
 aN
@@ -27288,11 +27399,11 @@ aN
 aN
 aN
 aN
-YA
-PJ
-BF
-Cl
-YA
+aN
+aN
+aN
+aN
+aN
 aN
 aN
 aN
@@ -27540,16 +27651,16 @@ aN
 aN
 aN
 aN
-aN
-aN
+YA
 aN
 aN
 aN
 YA
-PJ
-BF
-Cl
-YA
+aN
+aN
+aN
+aN
+aN
 aN
 aN
 aN
@@ -27797,16 +27908,16 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
-PJ
-BF
-Cl
+aU
+FZ
+qp
 YA
+aN
+aN
+aN
+aN
+aN
 aN
 aN
 aN
@@ -28054,16 +28165,16 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
 PJ
 BF
 Cl
 YA
+aN
+aN
+aN
+aN
+aN
 aN
 aN
 aN
@@ -28311,16 +28422,16 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
 PJ
 BF
 Cl
 YA
+aN
+aN
+aN
+aN
+aN
 Db
 aN
 aN
@@ -28568,16 +28679,16 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
 PJ
-Gc
+BF
 Cl
 YA
+aN
+aN
+aN
+aN
+aN
 aN
 IW
 Tw
@@ -28825,16 +28936,16 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
 PJ
 BF
 Cl
 YA
+aN
+aN
+aN
+aN
+aN
 aN
 Rp
 Sp
@@ -29082,17 +29193,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
 PJ
 BF
 Cl
 YA
 aN
+aN
+aN
+aN
+aN
+Db
 Rp
 Ty
 Kg
@@ -29339,16 +29450,16 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
 PJ
-BF
+Gc
 Cl
 YA
+aN
+aN
+aN
+aN
+aN
 aN
 Rp
 TA
@@ -29596,17 +29707,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
-ET
+PJ
 BF
-GP
+Cl
 YA
 aN
+aN
+aN
+aN
+aN
+Te
 Rp
 xs
 Rs
@@ -29853,17 +29964,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 YA
-sm
-sm
-sm
+PJ
+BF
+Cl
 YA
-YA
+aN
+aN
+aN
+aN
+aN
+GC
 Jb
 Rs
 Rs
@@ -30110,17 +30221,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-sm
-EW
-Gd
-GR
-uC
 YA
+PJ
+BF
+Cl
+YA
+Te
+GC
+GC
+GC
+GC
+GC
 Jb
 Rs
 Rs
@@ -30367,17 +30478,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-sm
-vt
-vt
-vt
-vt
 YA
+ET
+BF
+GP
+YA
+Te
+oW
+Mh
+NQ
+Ps
+Te
 Rp
 rB
 Rs
@@ -30622,19 +30733,19 @@ aN
 aN
 aN
 aN
-Db
 aN
 aN
-aN
-aN
-aN
-Db
-sm
-EZ
-Ge
-vt
-vt
 YA
+sm
+sm
+sm
+YA
+Te
+JD
+Hi
+Hi
+Pv
+Te
 Rp
 TF
 Rs
@@ -30881,17 +30992,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
 sm
+EW
+Gd
+GR
+uC
+Te
 JH
-vt
-vt
-vt
-YA
+Hi
+Hi
+NL
+Te
 Rp
 Rp
 Rs
@@ -31138,17 +31249,17 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-YA
-YA
-ku
-ku
-YA
-YA
+sm
+vt
+vt
+vt
+vt
+AU
+JH
+Hi
+Hi
+PD
+AX
 aN
 Rp
 WD
@@ -31395,13 +31506,13 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-Te
-Fz
+sm
+vt
+vt
+vt
+vt
+AU
+JH
 Hi
 Hi
 PG
@@ -31652,18 +31763,18 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-pB
-mJ
-Hi
-Hi
-Hi
+sm
+EZ
+Ge
+vt
+vt
+AX
+JK
+Mi
+NS
 PH
-Te
-pc
+pK
+Rr
 Ra
 Ra
 Ra
@@ -31909,18 +32020,18 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
+YA
+YA
+YA
+YA
+YA
 Te
-og
-Hi
-Hi
-of
 Te
-Rx
+Mn
+Te
+Te
+Te
+Ru
 Ra
 Ra
 Ra
@@ -32169,15 +32280,15 @@ aN
 aN
 aN
 aN
-aN
-aN
-Te
-wa
-Mh
-Hi
-Hi
-pK
-Rr
+DB
+DB
+DB
+DB
+uR
+DB
+DB
+Zr
+Rx
 Ra
 Ra
 Ra
@@ -32426,14 +32537,14 @@ aN
 aN
 aN
 aN
-aN
-aN
-Te
+DB
+HB
+Ip
 JM
 Iq
 DD
-PH
-AX
+DB
+VI
 Rr
 Ra
 Ra
@@ -32678,19 +32789,19 @@ aN
 aN
 aN
 aN
-Db
-aN
 aN
 aN
 aN
 aN
 Db
-AX
-Te
-pO
+DB
+HI
+Iq
+JN
+Iq
 DL
 DB
-Te
+Zr
 RB
 TK
 WH
@@ -32940,14 +33051,14 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-Te
-Te
-Te
-Te
-Te
+DB
+HL
+Iq
+JR
+Iq
+DN
+DB
+Zr
 Zr
 TR
 WQ
@@ -33197,13 +33308,13 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
+DB
+HM
+Ir
+Iq
+Mo
+DY
+DB
 aN
 Zr
 PU
@@ -33454,13 +33565,13 @@ aN
 aN
 aN
 aN
-aN
-aN
-aN
-aN
-aN
-aN
-aN
+DB
+DB
+DB
+uR
+DB
+DB
+DB
 aN
 Zr
 TR

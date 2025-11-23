@@ -110,9 +110,6 @@
 	name = "combat shotgun internal magazine"
 	max_ammo = 6
 
-/obj/item/ammo_box/magazine/internal/shot/com/confetti
-	ammo_type = /obj/item/ammo_casing/shotgun/confetti
-
 /obj/item/ammo_box/magazine/internal/shot/malf
 	name = "cyborg shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/lasershot

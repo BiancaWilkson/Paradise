@@ -91628,6 +91628,13 @@
 /obj/structure/closet/lasertag/blue,
 /turf/simulated/floor/carpet/arcade,
 /area/station/public/arcade)
+"sWO" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'KEEP CLEAR OF DOCKING AREA'.";
+	name = "KEEP CLEAR: DOCKING AREA"
+	},
+/turf/simulated/wall,
+/area/space/nearstation)
 "sWT" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/effect/turf_decal/tiles/dark/checker,
@@ -98834,7 +98841,6 @@
 /area/station/security/permabrig)
 "uAj" = (
 /obj/machinery/door/poddoor/impassable/gamma,
-/obj/structure/fans/tiny,
 /turf/simulated/floor/plasteel/dark,
 /area/station/security/prisonershuttle)
 "uAB" = (
@@ -113110,12 +113116,8 @@
 /turf/simulated/floor/plasteel,
 /area/station/security/prison/cell_block/a)
 "xEp" = (
-/obj/docking_port/stationary/gamma_armory{
-	dir = 8;
-	name = "NSS Farragus Gamma Armory Shuttle Dock"
-	},
 /turf/space,
-/area/space)
+/area/shuttle/gamma/station)
 "xEv" = (
 /obj/machinery/atmospherics/binary/valve/open{
 	dir = 4
@@ -127558,8 +127560,8 @@ ksx
 lzH
 lzH
 lzH
-ksx
 lzH
+sWO
 lzH
 lzH
 ksx
@@ -127812,13 +127814,13 @@ rNK
 rNK
 rNK
 lzH
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
 lzH
 qQO
 slw
@@ -128069,13 +128071,13 @@ rNK
 rNK
 rNK
 lzH
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
 lzH
 qQO
 vFf
@@ -128326,13 +128328,13 @@ rNK
 rNK
 rNK
 lzH
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
 lzH
 qQO
 lcC
@@ -128583,13 +128585,13 @@ rNK
 rNK
 rNK
 ksx
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
 ksx
 qQO
 uGh
@@ -128840,13 +128842,13 @@ pVD
 pVD
 pVD
 pVD
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
-rNK
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
 lzH
 qQO
 dLp
@@ -129097,13 +129099,13 @@ xUW
 hhY
 muW
 pVD
-rNK
-rNK
-rNK
 xEp
-rNK
-rNK
-rNK
+xEp
+xEp
+xEp
+xEp
+xEp
+xEp
 lzH
 qQO
 hLN

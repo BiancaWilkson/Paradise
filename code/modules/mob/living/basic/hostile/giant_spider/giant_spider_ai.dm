@@ -79,7 +79,6 @@
 	var/scan_range = 3
 
 /datum/ai_behavior/find_unwebbed_turf/perform(seconds_per_tick, datum/ai_controller/controller)
-	. = ..()
 	var/mob/living/spider = controller.pawn
 	var/atom/current_target = controller.blackboard[target_key]
 	if(current_target && !(locate(/obj/structure/spider/stickyweb) in current_target))
@@ -146,7 +145,6 @@
 	return ..()
 
 /datum/ai_behavior/spin_web/perform(seconds_per_tick, datum/ai_controller/controller, action_key, target_key)
-	. = ..()
 	var/datum/action/innate/web_giant_spider/web_action = controller.blackboard[action_key]
 	if(web_action?.Trigger())
 		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
@@ -171,7 +169,6 @@
 	var/scan_range = 3
 
 /datum/ai_behavior/find_unwrapped_target/perform(seconds_per_tick, datum/ai_controller/controller)
-	. = ..()
 	var/mob/living/spider = controller.pawn
 	var/atom/current_target = controller.blackboard[target_key]
 	if(current_target)
@@ -228,7 +225,6 @@
 	return ..()
 
 /datum/ai_behavior/wrap_target/perform(seconds_per_tick, datum/ai_controller/controller, action_key, target_key)
-	. = ..()
 	var/datum/action/innate/wrap_giant_spider/wrap_action = controller.blackboard[action_key]
 	if(wrap_action?.Trigger())
 		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
@@ -261,7 +257,6 @@
 	return ..()
 
 /datum/ai_behavior/lay_eggs/perform(seconds_per_tick, datum/ai_controller/controller, action_key)
-	. = ..()
 	var/datum/action/innate/lay_eggs_giant_spider/egg_action = controller.blackboard[action_key]
 	if(egg_action?.Trigger())
 		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_SUCCEEDED
@@ -298,7 +293,6 @@
 	set_movement_target(controller, target)
 
 /datum/ai_behavior/cling_spider_follow/perform(seconds_per_tick, datum/ai_controller/controller, target_key)
-	. = ..()
 	var/atom/target = controller.blackboard[target_key]
 	if(QDELETED(target))
 		return AI_BEHAVIOR_DELAY | AI_BEHAVIOR_FAILED

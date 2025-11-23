@@ -7,7 +7,6 @@
 
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/random_speech/alien,
-		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/attack_obstacle_in_path,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree,
@@ -18,7 +17,6 @@
 /datum/ai_controller/basic_controller/alien/sentinel
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/random_speech/alien,
-		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/maintain_distance,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/opportunistic,
@@ -28,7 +26,6 @@
 /datum/ai_controller/basic_controller/alien/corgi
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/simple_find_target,
-		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/maintain_distance,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/opportunistic,
 		/datum/ai_planning_subtree/ranged_skirmish,
@@ -42,7 +39,6 @@
 
 	planning_subtrees = list(
 		/datum/ai_planning_subtree/random_speech/alien,
-		/datum/ai_planning_subtree/target_retaliate/check_faction,
 		/datum/ai_planning_subtree/simple_find_target,
 		/datum/ai_planning_subtree/maintain_distance,
 		/datum/ai_planning_subtree/basic_melee_attack_subtree/opportunistic,
